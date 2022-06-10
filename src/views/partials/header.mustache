@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetDevShop - O petshop do dev</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+</head>
+<body>
+<header>
+    <div class="container">
+        <a href="/">PetDevShop</a>
+        <form method="GET" action="/search">
+            <input type="search" name="q" placeholder="Pesquise por raça" />
+        </form>
+    </div>
+</header>
+<nav>
+    <ul>
+        <!--Class que sera ativada pelo função no pageController-->
+        <li class="{{#menu.all}}active{{/menu.all}}"><a href="/">Todos</a></li>
+        <li class="{{#menu.dog}}active{{/menu.dog}}"><a href="/dogs">Cachorros</a></li>
+        <li class="{{#menu.cat}}active{{/menu.cat}}"><a href="/cats">Gatos</a></li>
+        <li class="{{#menu.fish}}active{{/menu.fish}}"><a href="/fishes">Peixes</a></li>
+    </ul>
+</nav>
