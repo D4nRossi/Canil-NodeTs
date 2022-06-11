@@ -5,12 +5,23 @@
 <h2>{{title}} disponíveis para adoção</h2>
 {{/banner}}
 
+<!--Vai repetir o array list com base no models-->
 <div class="container list">
-    <div class="item">
-        <img src="/images/pastor-alemao.jpg" class="item--image" />
-        <div class="item--name">Pastor-alemão</div>
-        <div class="item--color">Cor: Amarelo e Preto</div>
-        <div class="item--genre">Gênero: Masculino</div>
-    </div>
+    {{#list}}
+        <div class="item">
+            <img src="images/{{image}}" class="item--image"/>
+            <div class="item--name">{{name}}</div>
+            <div class="item--color">Cor: {{color}}</div>
+            <div class="item--genre">Gênero: {{sex}}</div>
+        </div>
+    {{/list}}
 </div>
+
+<!--quando o pet da list não existir-->
+{{^list}}
+    <div class="conatainer no-list">
+        <h2>Não há animais disponíveis nessas condições.</h2>
+    </div>
+{{/list}}
+
 {{>partials/footer}}

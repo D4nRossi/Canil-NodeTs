@@ -135,7 +135,7 @@ const data: Pet[] = [
 ]
 
 // um model é um objeto com funções
-export const pet = {
+export const Pet = {
     //função para retornar todos os pets, retornando um array de Pet
     getAll: (): Pet[] =>{
         return data;
