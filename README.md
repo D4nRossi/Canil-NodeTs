@@ -8,3 +8,6 @@
 
 ### Para rodar o projeto
 `npm start`
+
+### Link do Heroku
+https://thawing-oasis-28227.herokuapp.com/
